@@ -23,7 +23,7 @@ puts("Seed admin")
 10.times do
   Admin.create(
     email: Faker::Internet.email,
-    password: Faker::Code.nric,
+    password_digest: Faker::Code.nric,
   )
 end
 
@@ -31,7 +31,7 @@ puts("Seed vender")
 10.times do
   Vender.create(
     email: Faker::Internet.email,
-    password: Faker::Code.nric,
+    password_digest: Faker::Code.nric,
     category: Faker::Commerce.vendor,
     location: Faker::Address.state,
   )
@@ -41,7 +41,7 @@ puts("Seed driver")
 10.times do
   Driver.create(
     email: Faker::Internet.email,
-    password: Faker::Code.nric,
+    password_digest: Faker::Code.nric,
   )
 end
 
@@ -49,7 +49,7 @@ puts("Seed Receiver")
 10.times do
   Receiver.create(
     email: Faker::Internet.email,
-    password: Faker::Code.nric,
+    password_digest: Faker::Code.nric,
     location: Faker::Address.state,
   )
 end

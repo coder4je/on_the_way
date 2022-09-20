@@ -66,12 +66,11 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    bcrypt (3.1.18)
     builder (3.2.4)
+    byebug (11.1.3)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
-    debug (1.6.2)
-      irb (>= 1.3.6)
-      reline (>= 0.3.1)
     digest (3.1.0)
     erubi (1.11.0)
     faker (2.23.0)
@@ -80,9 +79,6 @@ GEM
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    io-console (0.5.11)
-    irb (1.4.1)
-      reline (>= 0.3.0)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -114,6 +110,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.4)
+    rack-cors (1.1.1)
+      rack (>= 2.0.0)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (7.0.3.1)
@@ -143,8 +141,6 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
-    reline (0.3.1)
-      io-console (~> 0.5)
     strscan (3.0.4)
     thor (1.2.1)
     timeout (0.3.0)
@@ -159,10 +155,12 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  debug
+  bcrypt
+  byebug
   faker
   pg (~> 1.1)
   puma (~> 5.0)
+  rack-cors
   rails (~> 7.0.3, >= 7.0.3.1)
   tzinfo-data
 

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_19_193829) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_20_204306) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_193829) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_193829) do
 
   create_table "receivers", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.text "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_19_193829) do
 
   create_table "venders", force: :cascade do |t|
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "category"
     t.text "location"
     t.datetime "created_at", null: false
