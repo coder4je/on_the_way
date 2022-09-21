@@ -31,3 +31,5 @@ end
 gem 'faker'
 
 gem "bcrypt"
+
+gem 'active_model_serializers'

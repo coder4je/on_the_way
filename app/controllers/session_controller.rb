@@ -5,9 +5,9 @@ class SessionController < ApplicationController
   
     if params[:admin]
       admin = Admin.find_by(email: params[:email])
-      if user&.authenticate(params[:password])
+      if admin&.authenticate(params[:password])
         session[:admin_id] = admin.id
-        render json: user, status: :ok
+        render json: admin, status: :ok
         # redirect_to 
       else
         render json: {error: 'invalid credentials'}, status: :unauthorized
